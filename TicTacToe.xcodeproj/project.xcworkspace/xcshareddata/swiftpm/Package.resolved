@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "iOSDevPackage",
+        "repositoryURL": "https://github.com/ISSArt-LLC/SwiftDeveloperPackage",
+        "state": {
+          "branch": "uikit-opt-out",
+          "revision": "b469ec79c45cb97fcba8c45a64ca190368b44af8",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
