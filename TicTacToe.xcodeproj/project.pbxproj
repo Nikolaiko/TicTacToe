@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9103CE7927A626990073392A /* GamePoleElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103CE7827A626990073392A /* GamePoleElement.swift */; };
 		914156B227A38E4700AE8CAB /* TicTacToe WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 914156B127A38E4700AE8CAB /* TicTacToe WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		914156B727A38E4800AE8CAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 914156B627A38E4800AE8CAB /* Assets.xcassets */; };
 		914156BD27A38E4800AE8CAB /* TicTacToe WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 914156BC27A38E4800AE8CAB /* TicTacToe WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -81,6 +82,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9103CE7827A626990073392A /* GamePoleElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePoleElement.swift; sourceTree = "<group>"; };
 		914156AD27A38E4700AE8CAB /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		914156B127A38E4700AE8CAB /* TicTacToe WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TicTacToe WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		914156B627A38E4800AE8CAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				9166822127A3D6B9006ABC47 /* GameScreen.swift */,
+				9103CE7827A626990073392A /* GamePoleElement.swift */,
 			);
 			path = GameScreen;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				9166820C27A3B03D006ABC47 /* MainScreenView.swift in Sources */,
 				914156CA27A38E4800AE8CAB /* ComplicationController.swift in Sources */,
 				914156C227A38E4800AE8CAB /* TicTacToeApp.swift in Sources */,
+				9103CE7927A626990073392A /* GamePoleElement.swift in Sources */,
 				914156C827A38E4800AE8CAB /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -715,6 +719,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = ZWXN4J2VCP;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nikolai.TicTacToe;
@@ -728,6 +733,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = ZWXN4J2VCP;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nikolai.TicTacToe;
