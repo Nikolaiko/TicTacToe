@@ -8,9 +8,12 @@ struct MainScreenView: View {
     var body: some View {
         VStack {
             Button {
-                navigation.push(GameScreen())
+                let userPlayer = UserPlayer("Player", .cross)
+                let aiPlayer = EasyAI(playerCellType: .zero)
+                let model = GameViewModel(PlayersOrder(userPlayer, aiPlayer))
+                navigation.push(GameScreen(viewModel: model))
             } label: {
-                Text("Versus AI")
+                Text("Easy AI")
             }
         }
     }

@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		9103CE7927A626990073392A /* GamePoleElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103CE7827A626990073392A /* GamePoleElement.swift */; };
+		91318C9927A77F970086B94F /* GameTurn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91318C9827A77F970086B94F /* GameTurn.swift */; };
+		91318C9C27A780620086B94F /* GameAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91318C9B27A780620086B94F /* GameAI.swift */; };
+		91318C9E27A781000086B94F /* EasyAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91318C9D27A781000086B94F /* EasyAI.swift */; };
+		91318CA027A782910086B94F /* GameError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91318C9F27A782910086B94F /* GameError.swift */; };
+		91318CA327A78A090086B94F /* GamePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91318CA227A78A090086B94F /* GamePlayer.swift */; };
+		91318CA527A78B3F0086B94F /* UserPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91318CA427A78B3F0086B94F /* UserPlayer.swift */; };
+		91318CA727A794D40086B94F /* PlayersOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91318CA627A794D40086B94F /* PlayersOrder.swift */; };
+		9135515727A6E5BE007012DA /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135515627A6E5BE007012DA /* CellType.swift */; };
+		9135515A27A6EB82007012DA /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135515927A6EB82007012DA /* GameViewModel.swift */; };
 		914156B227A38E4700AE8CAB /* TicTacToe WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 914156B127A38E4700AE8CAB /* TicTacToe WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		914156B727A38E4800AE8CAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 914156B627A38E4800AE8CAB /* Assets.xcassets */; };
 		914156BD27A38E4800AE8CAB /* TicTacToe WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 914156BC27A38E4800AE8CAB /* TicTacToe WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -83,6 +92,15 @@
 
 /* Begin PBXFileReference section */
 		9103CE7827A626990073392A /* GamePoleElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePoleElement.swift; sourceTree = "<group>"; };
+		91318C9827A77F970086B94F /* GameTurn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTurn.swift; sourceTree = "<group>"; };
+		91318C9B27A780620086B94F /* GameAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAI.swift; sourceTree = "<group>"; };
+		91318C9D27A781000086B94F /* EasyAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyAI.swift; sourceTree = "<group>"; };
+		91318C9F27A782910086B94F /* GameError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameError.swift; sourceTree = "<group>"; };
+		91318CA227A78A090086B94F /* GamePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayer.swift; sourceTree = "<group>"; };
+		91318CA427A78B3F0086B94F /* UserPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPlayer.swift; sourceTree = "<group>"; };
+		91318CA627A794D40086B94F /* PlayersOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersOrder.swift; sourceTree = "<group>"; };
+		9135515627A6E5BE007012DA /* CellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellType.swift; sourceTree = "<group>"; };
+		9135515927A6EB82007012DA /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		914156AD27A38E4700AE8CAB /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		914156B127A38E4700AE8CAB /* TicTacToe WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TicTacToe WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		914156B627A38E4800AE8CAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -130,6 +148,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		91318C9A27A780530086B94F /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				91318C9B27A780620086B94F /* GameAI.swift */,
+				91318C9D27A781000086B94F /* EasyAI.swift */,
+			);
+			path = AI;
+			sourceTree = "<group>";
+		};
+		91318CA127A789A20086B94F /* GamePlayers */ = {
+			isa = PBXGroup;
+			children = (
+				91318C9A27A780530086B94F /* AI */,
+				91318CA227A78A090086B94F /* GamePlayer.swift */,
+				91318CA427A78B3F0086B94F /* UserPlayer.swift */,
+			);
+			path = GamePlayers;
+			sourceTree = "<group>";
+		};
+		9135515527A6E5A8007012DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				91318CA127A789A20086B94F /* GamePlayers */,
+				9135515627A6E5BE007012DA /* CellType.swift */,
+				91318C9827A77F970086B94F /* GameTurn.swift */,
+				91318C9F27A782910086B94F /* GameError.swift */,
+				91318CA627A794D40086B94F /* PlayersOrder.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9135515827A6EB73007012DA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9135515927A6EB82007012DA /* GameViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		914156A627A38E4700AE8CAB = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +222,7 @@
 		914156C027A38E4800AE8CAB /* TicTacToe WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				9135515527A6E5A8007012DA /* Model */,
 				9166822027A3D6A9006ABC47 /* GameScreen */,
 				9166820D27A3B519006ABC47 /* Common */,
 				9166820A27A3B02A006ABC47 /* MainScreen */,
@@ -230,6 +288,7 @@
 		9166822027A3D6A9006ABC47 /* GameScreen */ = {
 			isa = PBXGroup;
 			children = (
+				9135515827A6EB73007012DA /* ViewModel */,
 				9166822127A3D6B9006ABC47 /* GameScreen.swift */,
 				9103CE7827A626990073392A /* GamePoleElement.swift */,
 			);
@@ -433,12 +492,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91318CA327A78A090086B94F /* GamePlayer.swift in Sources */,
+				9135515A27A6EB82007012DA /* GameViewModel.swift in Sources */,
 				914156C627A38E4800AE8CAB /* NotificationController.swift in Sources */,
 				9166822227A3D6B9006ABC47 /* GameScreen.swift in Sources */,
+				91318CA027A782910086B94F /* GameError.swift in Sources */,
+				91318C9E27A781000086B94F /* EasyAI.swift in Sources */,
 				9166820C27A3B03D006ABC47 /* MainScreenView.swift in Sources */,
+				9135515727A6E5BE007012DA /* CellType.swift in Sources */,
 				914156CA27A38E4800AE8CAB /* ComplicationController.swift in Sources */,
+				91318CA727A794D40086B94F /* PlayersOrder.swift in Sources */,
+				91318C9C27A780620086B94F /* GameAI.swift in Sources */,
 				914156C227A38E4800AE8CAB /* TicTacToeApp.swift in Sources */,
 				9103CE7927A626990073392A /* GamePoleElement.swift in Sources */,
+				91318CA527A78B3F0086B94F /* UserPlayer.swift in Sources */,
+				91318C9927A77F970086B94F /* GameTurn.swift in Sources */,
 				914156C827A38E4800AE8CAB /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
