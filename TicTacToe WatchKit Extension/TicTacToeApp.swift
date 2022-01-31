@@ -5,7 +5,7 @@ import SwiftDevPackage
 struct TicTacToeApp: App {
     @SceneBuilder var body: some Scene {
         WindowGroup {
-            NavigationControllerView(transition: .custom(.slide, .slide)) {
+            NavigationControllerView(transition: .custom(.opacity, .slide)) {
                 MainScreenView()
             }
         }

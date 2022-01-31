@@ -5,8 +5,9 @@ class PlayersOrder {
     private static let SECOND_PLAYER_INDEX = 1
     
     private var currentPlayerIndex: Int
-    private let firstPlayer: GamePlayer
-    private let secondPlayer: GamePlayer
+    
+    let firstPlayer: GamePlayer
+    let secondPlayer: GamePlayer
     
     init(_ first: GamePlayer, _ second: GamePlayer) {
         firstPlayer = first
@@ -24,5 +25,9 @@ class PlayersOrder {
         currentPlayerIndex = (currentPlayerIndex == PlayersOrder.FIRST_PLAYER_INDEX)
             ? PlayersOrder.SECOND_PLAYER_INDEX
             : PlayersOrder.FIRST_PLAYER_INDEX
+    }
+    
+    func resetOrder() {
+        currentPlayerIndex = PlayersOrder.FIRST_PLAYER_INDEX
     }
 }
