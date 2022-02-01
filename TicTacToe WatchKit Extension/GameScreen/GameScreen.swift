@@ -26,19 +26,22 @@ struct GameScreen: View {
                                 if viewModel.currentUser.isHuman() && itemState == .empty {
                                     GamePoleElement(itemState, poleWidth)
                                         .onTapGesture {
-                                            print("TURN")
                                             viewModel.makeTurn(cellIndex: i)
                                         }
+                                        .accessibilityLabel("\(UITestLabels.gamePoleCellTag)\(i)")
                                 } else {
                                     GamePoleElement(itemState, poleWidth)
+                                        .accessibilityLabel("\(UITestLabels.gamePoleCellTag)\(i)")
                                 }
                             }
                         }
+                        .accessibilityLabel(UITestLabels.gamePoleGridTag)
                     }
                     .background(.black)
                     Spacer()
                     Text("\(viewModel.currentUser.userName()) turn")
                         .foregroundColor(.black)
+                        .accessibilityLabel(UITestLabels.activeUserLabeTag)
                     Spacer()
                 }
                 Spacer()

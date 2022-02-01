@@ -1,6 +1,8 @@
 import Foundation
 
 struct EasyAI: GameAI {
+    public static let ERROR_MESSAGE = "No Empty Cells"
+    
     let playerCellType: CellType
     
     func makeTurn(gamePole: [CellType]) throws -> GameTurn {
@@ -9,7 +11,7 @@ struct EasyAI: GameAI {
         }
         
         if freeCells.isEmpty {
-            throw GameError.aiTurnError("No Empty Cells")
+            throw GameError.aiTurnError(EasyAI.ERROR_MESSAGE)
         }
         freeCells.shuffle()
         

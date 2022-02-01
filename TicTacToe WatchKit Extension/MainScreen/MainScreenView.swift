@@ -15,6 +15,7 @@ struct MainScreenView: View {
             } label: {
                 Text("Easy AI")
             }
+            .accessibilityLabel(UITestLabels.easyAIGameButtonTag)
         }
     }
 }
