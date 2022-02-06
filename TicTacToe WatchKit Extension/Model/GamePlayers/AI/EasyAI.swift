@@ -6,17 +6,13 @@ struct EasyAI: GameAI {
     let playerCellType: CellType
     
     func makeTurn(gamePole: [CellType]) throws -> GameTurn {
-        var freeCells = gamePole.filter { currentItem in
-            currentItem == .empty
-        }
+        var freeCells = Array(gamePole.indexes(of: .empty))
         
         if freeCells.isEmpty {
             throw GameError.aiTurnError(EasyAI.ERROR_MESSAGE)
         }
         freeCells.shuffle()
-        
-        let index = gamePole.firstIndex(of: freeCells.first!)!
-        return GameTurn(type: playerCellType, index: index)
+        return GameTurn(type: playerCellType, index: freeCells.first!)
     }
     
     func isHuman() -> Bool {
