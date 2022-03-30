@@ -31,6 +31,9 @@
 		9166820C27A3B03D006ABC47 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9166820B27A3B03D006ABC47 /* MainScreenView.swift */; };
 		9166821F27A3C173006ABC47 /* SwiftDevPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 9166821E27A3C173006ABC47 /* SwiftDevPackage */; };
 		9166822227A3D6B9006ABC47 /* GameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9166822127A3D6B9006ABC47 /* GameScreen.swift */; };
+		918D322727D26B0C00A21574 /* NormalAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918D322627D26B0C00A21574 /* NormalAI.swift */; };
+		918D322927D26D3200A21574 /* GameConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918D322827D26D3200A21574 /* GameConsts.swift */; };
+		918D322C27D26FC600A21574 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918D322B27D26FC600A21574 /* GameLogic.swift */; };
 		9190FE9427AEB4EA00055D77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9190FE9327AEB4EA00055D77 /* Assets.xcassets */; };
 		91BE1A3427A8EE980042AF9E /* UITestLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BE1A3327A8EE980042AF9E /* UITestLabels.swift */; };
 		91BE1A3527A8F2900042AF9E /* UITestLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BE1A3327A8EE980042AF9E /* UITestLabels.swift */; };
@@ -126,6 +129,9 @@
 		914156E627A38E4800AE8CAB /* TicTacToeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9166820B27A3B03D006ABC47 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		9166822127A3D6B9006ABC47 /* GameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreen.swift; sourceTree = "<group>"; };
+		918D322627D26B0C00A21574 /* NormalAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalAI.swift; sourceTree = "<group>"; };
+		918D322827D26D3200A21574 /* GameConsts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConsts.swift; sourceTree = "<group>"; };
+		918D322B27D26FC600A21574 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 		9190FE9327AEB4EA00055D77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91BE1A3327A8EE980042AF9E /* UITestLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestLabels.swift; sourceTree = "<group>"; };
 		91BE1A3727A8F7AC0042AF9E /* GameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameUITests.swift; sourceTree = "<group>"; };
@@ -166,6 +172,7 @@
 			children = (
 				91318C9B27A780620086B94F /* GameAI.swift */,
 				91318C9D27A781000086B94F /* EasyAI.swift */,
+				918D322627D26B0C00A21574 /* NormalAI.swift */,
 			);
 			path = AI;
 			sourceTree = "<group>";
@@ -173,6 +180,7 @@
 		91318CA127A789A20086B94F /* GamePlayers */ = {
 			isa = PBXGroup;
 			children = (
+				918D322A27D26FB300A21574 /* Logic */,
 				91318C9A27A780530086B94F /* AI */,
 				91318CA227A78A090086B94F /* GamePlayer.swift */,
 				91318CA427A78B3F0086B94F /* UserPlayer.swift */,
@@ -306,10 +314,19 @@
 			path = GameScreen;
 			sourceTree = "<group>";
 		};
+		918D322A27D26FB300A21574 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				918D322B27D26FC600A21574 /* GameLogic.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
 		91BE1A3227A8EE860042AF9E /* Consts */ = {
 			isa = PBXGroup;
 			children = (
 				91BE1A3327A8EE980042AF9E /* UITestLabels.swift */,
+				918D322827D26D3200A21574 /* GameConsts.swift */,
 			);
 			path = Consts;
 			sourceTree = "<group>";
@@ -529,12 +546,15 @@
 			files = (
 				91318CA327A78A090086B94F /* GamePlayer.swift in Sources */,
 				9135515A27A6EB82007012DA /* GameViewModel.swift in Sources */,
+				918D322927D26D3200A21574 /* GameConsts.swift in Sources */,
+				918D322727D26B0C00A21574 /* NormalAI.swift in Sources */,
 				914156C627A38E4800AE8CAB /* NotificationController.swift in Sources */,
 				9166822227A3D6B9006ABC47 /* GameScreen.swift in Sources */,
 				91318CA027A782910086B94F /* GameError.swift in Sources */,
 				91318C9E27A781000086B94F /* EasyAI.swift in Sources */,
 				9166820C27A3B03D006ABC47 /* MainScreenView.swift in Sources */,
 				91E19F9327A84D9E0053C350 /* AlertItem.swift in Sources */,
+				918D322C27D26FC600A21574 /* GameLogic.swift in Sources */,
 				91E19F9027A848100053C350 /* Array+Utils.swift in Sources */,
 				9135515727A6E5BE007012DA /* CellType.swift in Sources */,
 				91BE1A3427A8EE980042AF9E /* UITestLabels.swift in Sources */,
@@ -715,7 +735,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"TicTacToe WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = ZWXN4J2VCP;
 				ENABLE_PREVIEWS = YES;
@@ -730,7 +750,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nikolai.TicTacToe.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -747,7 +767,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"TicTacToe WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = ZWXN4J2VCP;
 				ENABLE_PREVIEWS = YES;
@@ -762,7 +782,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nikolai.TicTacToe.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -782,13 +802,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = ZWXN4J2VCP;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = TicTacToe_WatchKit_Extension;
 				INFOPLIST_FILE = "TicTacToe-WatchKit-App-Info.plist";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nikolai.TicTacToe.watchkitapp;
 				PRODUCT_NAME = TicTacToe;
 				SDKROOT = watchos;
@@ -808,13 +828,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = ZWXN4J2VCP;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = TicTacToe_WatchKit_Extension;
 				INFOPLIST_FILE = "TicTacToe-WatchKit-App-Info.plist";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nikolai.TicTacToe.watchkitapp;
 				PRODUCT_NAME = TicTacToe;
 				SDKROOT = watchos;
@@ -830,10 +850,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = ZWXN4J2VCP;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nikolai.TicTacToe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -844,10 +864,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = ZWXN4J2VCP;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nikolai.TicTacToe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

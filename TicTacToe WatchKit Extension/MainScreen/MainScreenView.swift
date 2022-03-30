@@ -13,7 +13,17 @@ struct MainScreenView: View {
                 let model = GameViewModel(PlayersOrder(userPlayer, aiPlayer))
                 navigation.push(GameScreen(viewModel: model))
             } label: {
-                Text("Easy AI")
+                Text("Младший брат")
+            }
+            .accessibilityLabel(UITestLabels.easyAIGameButtonTag)
+            
+            Button {
+                let userPlayer = UserPlayer("Player", .cross)
+                let aiPlayer = NormalAI(playerCellType: .zero)
+                let model = GameViewModel(PlayersOrder(userPlayer, aiPlayer))
+                navigation.push(GameScreen(viewModel: model))
+            } label: {
+                Text("Твой Батя")
             }
             .accessibilityLabel(UITestLabels.easyAIGameButtonTag)
         }

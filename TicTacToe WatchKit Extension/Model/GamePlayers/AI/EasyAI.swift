@@ -1,15 +1,13 @@
 import Foundation
 
 struct EasyAI: GameAI {
-    public static let ERROR_MESSAGE = "No Empty Cells"
-    
     let playerCellType: CellType
     
     func makeTurn(gamePole: [CellType]) throws -> GameTurn {
         var freeCells = Array(gamePole.indexes(of: .empty))
         
         if freeCells.isEmpty {
-            throw GameError.aiTurnError(EasyAI.ERROR_MESSAGE)
+            throw GameError.aiTurnError(ERROR_MESSAGE)
         }
         freeCells.shuffle()
         return GameTurn(type: playerCellType, index: freeCells.first!)
@@ -20,7 +18,7 @@ struct EasyAI: GameAI {
     }
     
     func userName() -> String {
-        "Easy AI"
+        "Младший брат"
     }
     
     func userCellType() -> CellType {

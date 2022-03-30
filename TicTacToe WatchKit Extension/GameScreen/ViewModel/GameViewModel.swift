@@ -9,11 +9,12 @@ class GameViewModel: ObservableObject {
     
     var gameWinner: GamePlayer? = nil
     
-    private let winPaths: Set<Set<Int>> = [
-        [0, 1, 2], [3, 4, 5], [6, 7, 8],
-        [0, 3, 6], [1, 4, 7], [2, 5, 8],
-        [0, 4, 8], [2, 4, 6]
-    ]
+    private let logic = GameLogic()
+//    private let winPaths: Set<Set<Int>> = [
+//        [0, 1, 2], [3, 4, 5], [6, 7, 8],
+//        [0, 3, 6], [1, 4, 7], [2, 5, 8],
+//        [0, 4, 8], [2, 4, 6]
+//    ]
     private let playersOrder: PlayersOrder
     
     init(_ order: PlayersOrder) {
@@ -30,7 +31,7 @@ class GameViewModel: ObservableObject {
     
     func makeTurn(cellIndex: Int) {
         boardState[cellIndex] = currentUser.userCellType()
-        if let winnerType = checkWinCondition() {
+        if let winnerType = logic.canAnyTypeWin(boardState: boardState) {
             let firstPlayerType = playersOrder.firstPlayer.userCellType()
             gameWinner = (winnerType == firstPlayerType)
                 ? playersOrder.firstPlayer
@@ -51,7 +52,7 @@ class GameViewModel: ObservableObject {
                 do {
                     let aiTurn = try ai.makeTurn(gamePole: boardState)
                     boardState[aiTurn.index] = currentUser.userCellType()
-                    if let winnerType = checkWinCondition() {
+                    if let winnerType = logic.canAnyTypeWin(boardState: boardState) {
                         let firstPlayerType = playersOrder.firstPlayer.userCellType()
                         gameWinner = (winnerType == firstPlayerType)
                             ? playersOrder.firstPlayer
@@ -83,22 +84,22 @@ class GameViewModel: ObservableObject {
         showAlert = false
     }
     
-    private func checkWinCondition() -> CellType? {
-        let crossIndexs = Set(boardState.indexes(of: .cross))
-        for currentPath in winPaths {
-            if currentPath.isSubset(of: crossIndexs) {
-                return .cross
-            }
-        }
-        
-        let zeroIndexs = Set(boardState.indexes(of: .zero))
-        for currentPath in winPaths {
-            if currentPath.isSubset(of: zeroIndexs) {
-                return .zero
-            }
-        }
-        return nil
-    }
+//    private func checkWinCondition() -> CellType? {
+//        let crossIndexs = Set(boardState.indexes(of: .cross))
+//        for currentPath in winPaths {
+//            if currentPath.isSubset(of: crossIndexs) {
+//                return .cross
+//            }
+//        }
+//
+//        let zeroIndexs = Set(boardState.indexes(of: .zero))
+//        for currentPath in winPaths {
+//            if currentPath.isSubset(of: zeroIndexs) {
+//                return .zero
+//            }
+//        }
+//        return nil
+//    }
 
     private func checkDrawCondition() -> Bool {
         boardState.filter { item in item == .empty }.isEmpty
