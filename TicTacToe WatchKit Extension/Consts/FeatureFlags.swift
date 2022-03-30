@@ -1,3 +1,3 @@
 import Foundation
 
-let enterNameScreenFeature = false
+let enterNameScreenFeature = true

@@ -9,7 +9,7 @@ struct TicTacToeApp: App {
                 if enterNameScreenFeature {
                     EnterScreenView()
                 } else {
-                    MainScreenView()
+                    MainScreenView(userName: "Player")
                 }
             }
         }

@@ -2,13 +2,13 @@ import SwiftUI
 import SwiftDevPackage
 
 struct MainScreenView: View {
-    
+    let userName: String
     @EnvironmentObject private var navigation: NavigationControllerViewModel
     
     var body: some View {
         VStack {
             Button {
-                let userPlayer = UserPlayer("Player", .cross)
+                let userPlayer = UserPlayer(userName, .cross)
                 let aiPlayer = EasyAI(playerCellType: .zero)
                 let model = GameViewModel(PlayersOrder(userPlayer, aiPlayer))
                 navigation.push(GameScreen(viewModel: model))
@@ -32,6 +32,6 @@ struct MainScreenView: View {
 
 struct MainScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        MainScreenView()
+        MainScreenView(userName: "Player")
     }
 }
