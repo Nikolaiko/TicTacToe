@@ -6,7 +6,11 @@ struct TicTacToeApp: App {
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationControllerView(transition: .custom(.opacity, .slide)) {
-                MainScreenView()
+                if enterNameScreenFeature {
+                    EnterScreenView()
+                } else {
+                    MainScreenView()
+                }
             }
         }
 
