@@ -39,8 +39,6 @@
 		91BE1A3527A8F2900042AF9E /* UITestLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BE1A3327A8EE980042AF9E /* UITestLabels.swift */; };
 		91BE1A3627A8F2920042AF9E /* UITestLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BE1A3327A8EE980042AF9E /* UITestLabels.swift */; };
 		91BE1A3827A8F7AC0042AF9E /* GameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BE1A3727A8F7AC0042AF9E /* GameUITests.swift */; };
-		91CD34C027F4D1E9003AD10C /* EnterScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CD34BF27F4D1E9003AD10C /* EnterScreenView.swift */; };
-		91CD34C227F4D235003AD10C /* FeatureFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CD34C127F4D235003AD10C /* FeatureFlags.swift */; };
 		91E19F9027A848100053C350 /* Array+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E19F8F27A848100053C350 /* Array+Utils.swift */; };
 		91E19F9327A84D9E0053C350 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E19F9227A84D9E0053C350 /* AlertItem.swift */; };
 		91E19F9527A850470053C350 /* GameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E19F9427A850470053C350 /* GameResult.swift */; };
@@ -138,8 +136,6 @@
 		91BE1A3327A8EE980042AF9E /* UITestLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestLabels.swift; sourceTree = "<group>"; };
 		91BE1A3727A8F7AC0042AF9E /* GameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameUITests.swift; sourceTree = "<group>"; };
 		91C7303427AD7CDA0047CD63 /* TicTacToe-WatchKit-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TicTacToe-WatchKit-App-Info.plist"; sourceTree = SOURCE_ROOT; };
-		91CD34BF27F4D1E9003AD10C /* EnterScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterScreenView.swift; sourceTree = "<group>"; };
-		91CD34C127F4D235003AD10C /* FeatureFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFlags.swift; sourceTree = "<group>"; };
 		91E19F8F27A848100053C350 /* Array+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Utils.swift"; sourceTree = "<group>"; };
 		91E19F9227A84D9E0053C350 /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 		91E19F9427A850470053C350 /* GameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResult.swift; sourceTree = "<group>"; };
@@ -249,7 +245,6 @@
 		914156C027A38E4800AE8CAB /* TicTacToe WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				91CD34BE27F4D1D3003AD10C /* EnterNameScreen */,
 				9190FE9327AEB4EA00055D77 /* Assets.xcassets */,
 				91BE1A3227A8EE860042AF9E /* Consts */,
 				91E19F8E27A847FD0053C350 /* Extensions */,
@@ -332,17 +327,8 @@
 			children = (
 				91BE1A3327A8EE980042AF9E /* UITestLabels.swift */,
 				918D322827D26D3200A21574 /* GameConsts.swift */,
-				91CD34C127F4D235003AD10C /* FeatureFlags.swift */,
 			);
 			path = Consts;
-			sourceTree = "<group>";
-		};
-		91CD34BE27F4D1D3003AD10C /* EnterNameScreen */ = {
-			isa = PBXGroup;
-			children = (
-				91CD34BF27F4D1E9003AD10C /* EnterScreenView.swift */,
-			);
-			path = EnterNameScreen;
 			sourceTree = "<group>";
 		};
 		91E19F8E27A847FD0053C350 /* Extensions */ = {
@@ -559,7 +545,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				91318CA327A78A090086B94F /* GamePlayer.swift in Sources */,
-				91CD34C027F4D1E9003AD10C /* EnterScreenView.swift in Sources */,
 				9135515A27A6EB82007012DA /* GameViewModel.swift in Sources */,
 				918D322927D26D3200A21574 /* GameConsts.swift in Sources */,
 				918D322727D26B0C00A21574 /* NormalAI.swift in Sources */,
@@ -572,7 +557,6 @@
 				918D322C27D26FC600A21574 /* GameLogic.swift in Sources */,
 				91E19F9027A848100053C350 /* Array+Utils.swift in Sources */,
 				9135515727A6E5BE007012DA /* CellType.swift in Sources */,
-				91CD34C227F4D235003AD10C /* FeatureFlags.swift in Sources */,
 				91BE1A3427A8EE980042AF9E /* UITestLabels.swift in Sources */,
 				914156CA27A38E4800AE8CAB /* ComplicationController.swift in Sources */,
 				91318CA727A794D40086B94F /* PlayersOrder.swift in Sources */,
@@ -1034,7 +1018,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ISSArt-LLC/SwiftDeveloperPackage";
 			requirement = {
-				branch = "uikit-opt-out";
+				branch = main;
 				kind = branch;
 			};
 		};
