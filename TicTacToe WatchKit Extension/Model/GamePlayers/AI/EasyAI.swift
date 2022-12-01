@@ -18,7 +18,7 @@ struct EasyAI: GameAI {
     }
     
     func userName() -> String {
-        "Младший братишка"
+        "Младший братик"
     }
     
     func userCellType() -> CellType {
