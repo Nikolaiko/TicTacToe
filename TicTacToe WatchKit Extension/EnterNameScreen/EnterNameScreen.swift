@@ -6,7 +6,7 @@ struct EnterNameScreen: View {
 
     var body: some View {
         VStack {
-            TextField("Enter name", text: $name)
+            TextField("Enter your name", text: $name)
             Button {
                 
             } label: {
