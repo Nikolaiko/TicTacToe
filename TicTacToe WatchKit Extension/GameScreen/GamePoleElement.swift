@@ -3,15 +3,15 @@ import SwiftUI
 struct GamePoleElement: View {
     private let cellType: CellType
     private let width: CGFloat
-    
+
     init(_ type: CellType, _ screenWidth: CGFloat) {
         cellType = type
         width = screenWidth
     }
-    
+
     var body: some View {
         HStack {
-            switch(cellType) {
+            switch cellType {
             case .empty:
                 emptyView()
                     .frame(height: width / 4)
@@ -21,10 +21,10 @@ struct GamePoleElement: View {
             case .cross:
                 crossView()
                     .frame(height: width / 4)
-            }            
+            }
         }
     }
-    
+
     func crossView() -> some View {
         return Rectangle()
             .foregroundColor(.white)
@@ -34,7 +34,7 @@ struct GamePoleElement: View {
                     .aspectRatio(contentMode: .fit)
             }
     }
-    
+
     func zeroView() -> some View {
         return Rectangle()
             .foregroundColor(.white)
@@ -44,10 +44,10 @@ struct GamePoleElement: View {
                     .aspectRatio(contentMode: .fit)
             }
     }
-    
+
     func emptyView() -> some View {
         return Rectangle()
-            .foregroundColor(.white)            
+            .foregroundColor(.white)
     }
 }
 

@@ -12,15 +12,15 @@ class TicTacToeUITests: XCTestCase {
     func testMainScreenEasyAIButtonExists() throws {
         let app = XCUIApplication()
         app.launch()
-        
+
         let easyButton = app.buttons[UITestLabels.easyAIGameButtonTag]
         XCTAssert(easyButton.exists)
     }
-    
+
     func testMainScreenEasyAIButtonEnabled() throws {
         let app = XCUIApplication()
         app.launch()
-        
+
         let easyButton = app.buttons[UITestLabels.easyAIGameButtonTag]
         XCTAssert(easyButton.isEnabled)
     }

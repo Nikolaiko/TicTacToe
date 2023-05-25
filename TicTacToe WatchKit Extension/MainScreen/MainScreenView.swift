@@ -4,7 +4,7 @@ import SwiftDevPackage
 struct MainScreenView: View {
     let userName: String
     @EnvironmentObject private var navigation: NavigationControllerViewModel
-    
+
     var body: some View {
         VStack {
             Button {
@@ -16,7 +16,7 @@ struct MainScreenView: View {
                 Text("Младший брат")
             }
             .accessibilityLabel(UITestLabels.easyAIGameButtonTag)
-            
+
             Button {
                 let userPlayer = UserPlayer("Player", .cross)
                 let aiPlayer = NormalAI(playerCellType: .zero)

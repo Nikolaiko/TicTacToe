@@ -368,6 +368,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 914156F227A38E4800AE8CAB /* Build configuration list for PBXNativeTarget "TicTacToe" */;
 			buildPhases = (
+				91CAD19D2943A26200AA85CF /* ShellScript */,
 				914156AB27A38E4700AE8CAB /* Resources */,
 				914156F127A38E4800AE8CAB /* Embed Watch Content */,
 			);
@@ -552,6 +553,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		91CAD19D2943A26200AA85CF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nexport PATH\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n  exit 1\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		914156B827A38E4800AE8CAB /* Sources */ = {

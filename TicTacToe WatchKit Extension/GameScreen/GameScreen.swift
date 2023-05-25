@@ -5,13 +5,13 @@ import SwiftDevPackage
 struct GameScreen: View {
     @EnvironmentObject private var navigation: NavigationControllerViewModel
     @ObservedObject var viewModel: GameViewModel
-    
+
     private let columns: [GridItem] = [
         GridItem(.flexible(), spacing: 5),
         GridItem(.flexible(), spacing: 5),
         GridItem(.flexible(), spacing: 5)
     ]
-    
+
     var body: some View {
         GeometryReader { geometry in
             let poleWidth = geometry.size.width
@@ -56,7 +56,7 @@ struct GameScreen: View {
                 navigation.pop()
             }
         } message: {
-            switch(viewModel.gameResult) {
+            switch viewModel.gameResult {
             case .inProgress:
                 Text("Игра еще в процессе!")
             case .draw:

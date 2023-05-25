@@ -8,7 +8,7 @@ struct EnterNameScreen: View {
         VStack {
             TextField("Enter your name", text: $name)
             Button {
-                
+
             } label: {
                 Text("Enter")
             }

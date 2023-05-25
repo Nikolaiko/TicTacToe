@@ -6,9 +6,9 @@ class GameViewModel: ObservableObject {
     @Published var gameResult: GameResult = GameResult.inProgress
     @Published var currentUser: GamePlayer
     @Published var showAlert: Bool = false
-    
-    var gameWinner: GamePlayer? = nil
-    
+
+    var gameWinner: GamePlayer?
+
     private let logic = GameLogic()
 //    private let winPaths: Set<Set<Int>> = [
 //        [0, 1, 2], [3, 4, 5], [6, 7, 8],
@@ -16,19 +16,19 @@ class GameViewModel: ObservableObject {
 //        [0, 4, 8], [2, 4, 6]
 //    ]
     private let playersOrder: PlayersOrder
-    
+
     init(_ order: PlayersOrder) {
         playersOrder = order
         currentUser = order.getCurrentPlayer()
     }
-    
+
     init(_ order: PlayersOrder, _ initialBoard: [CellType]) {
         playersOrder = order
         currentUser = order.getCurrentPlayer()
-        
+
         boardState = initialBoard
     }
-    
+
     func makeTurn(cellIndex: Int) {
         boardState[cellIndex] = currentUser.userCellType()
         if let winnerType = logic.canAnyTypeWin(boardState: boardState) {
@@ -38,15 +38,15 @@ class GameViewModel: ObservableObject {
                 : playersOrder.secondPlayer
             gameResult = .someoneWin
             showAlert = true
-            
+
         } else if checkDrawCondition() {
             gameResult = .draw
             showAlert = true
         } else {
-                                                
+
             playersOrder.nextPlayer()
             currentUser = playersOrder.getCurrentPlayer()
-            
+
             if !currentUser.isHuman() {
                 let ai = currentUser as! GameAI
                 do {
@@ -59,7 +59,7 @@ class GameViewModel: ObservableObject {
                             : playersOrder.secondPlayer
                         gameResult = .someoneWin
                         showAlert = true
-                        
+
                     } else if checkDrawCondition() {
                         gameResult = .draw
                         showAlert = true
@@ -73,17 +73,17 @@ class GameViewModel: ObservableObject {
             }
         }
     }
-    
+
     func resetGame() {
         boardState = Array(repeating: .empty, count: boardState.count)
-        
+
         playersOrder.resetOrder()
         currentUser = playersOrder.getCurrentPlayer()
-        
+
         gameResult = .inProgress
         showAlert = false
     }
-    
+
 //    private func checkWinCondition() -> CellType? {
 //        let crossIndexs = Set(boardState.indexes(of: .cross))
 //        for currentPath in winPaths {

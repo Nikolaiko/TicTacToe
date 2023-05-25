@@ -5,9 +5,9 @@
 //  Created by Nikolai Baklanov on 28.01.2022.
 //
 //
-//import XCTest
+// import XCTest
 //
-//class TicTacToeUITestsLaunchTests: XCTestCase {
+// class TicTacToeUITestsLaunchTests: XCTestCase {
 //
 //    override class var runsForEachTargetApplicationUIConfiguration: Bool {
 //        true
@@ -29,4 +29,4 @@
 //        attachment.lifetime = .keepAlways
 //        add(attachment)
 //    }
-//}
+// }
